@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+import AccordianComponent from './components/AccordianComponent';
+import FormComponent from './components/FormComponent';
+import ContentComponent from './components/ContentComponent';
+import LinksComponent from './components/LinksComponent';
+import ProfileComponent from './components/ProfileComponent';
+import NavbarComponent from './components/NavbarComponent';
+import ExclusiveComponent from './components/ExclusiveComponent';
 import './App.css';
+import videoBg from './assets/Video.mp4';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div>
+			<NavbarComponent />
+			<main>
+				<video src={videoBg} autoPlay loop muted />
+				<div className="bodyContent">
+					<ProfileComponent />
+					<LinksComponent />
+					<ExclusiveComponent />
+					<ContentComponent />
+					<FormComponent />
+					<AccordianComponent index={1} />
+					<AccordianComponent index={12} />
+					<AccordianComponent index={13} />
+				</div>
+			</main>
+		</div>
+	);
 }
 
 export default App;
